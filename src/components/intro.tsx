@@ -12,7 +12,8 @@ import { LuSend } from 'react-icons/lu'
 export default function Intro() {
   return (
     <section className='mb-28 max-w-[50rem] text-center sm:mb-0'>
-        <div className='flex items-center justify-center'>
+
+        <div className='flex items-center justify-center outline-none cursor-default'>
 
             <div className='relative'>
 
@@ -42,7 +43,8 @@ export default function Intro() {
 
         </div>
 
-        <motion.p className='mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-4xl'
+        <motion.p className='mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-4xl
+        outline-none cursor-default'
           initial={{opacity: 0, y: 100}}
           animate={{opacity: 1, y: 0}}
         >
