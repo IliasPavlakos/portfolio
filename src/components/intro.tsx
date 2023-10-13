@@ -3,6 +3,11 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link';
+import { HiDownload } from 'react-icons/hi'
+import { BsLinkedin } from 'react-icons/bs'
+import { FaGithubSquare } from 'react-icons/fa';
+import { LuSend } from 'react-icons/lu'
 
 export default function Intro() {
   return (
@@ -59,6 +64,49 @@ export default function Intro() {
                 </span>.
 
         </motion.p>
+
+        <motion.div className='flex flex-col sm:flex-row items-center justify-center gap-4 
+        text-lg font-medium px-4' 
+        initial={{ opacity: 0, y: 100  }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+          
+          <a href='/cv_ilias_pavlakos.pdf' download={true}
+          className='group bg-gray-900 text-white px-7 py-3 rounded-full
+          flex items-center gap-2
+          shadow hover:shadow-md
+          outline-none cursor-pointer focus:scale-[1.15] hover:scale-110 hover:bg-gray-950
+          active:scale-105
+          transition'>
+            Download CV <HiDownload className="opacity-90 group-hover:text-green-400 group-active:text-green-400 transition"/>
+          </a>
+
+          <Link href='#contact' className='group bg-white px-7 py-3 rounded-full
+          flex items-center gap-2 
+          shadow hover:shadow-md
+          outline-none cursor-pointer focus:scale-[1.15] hover:scale-110
+          active:scale-105
+          transition'>
+            Contact me <LuSend className='opacity-90 group-hover:text-sky-400 group-active:text-sky-400  transition'/>
+          </Link>
+
+          <a href='https://www.linkedin.com/in/ilias-pavlakos-200913217/' target='_blank'
+          className='group bg-white p-4 rounded-full
+          outline-none cursor-pointer focus:scale-[1.15] hover:scale-110
+          shadow hover:shadow-md
+          active:scale-105
+          transition'>
+            <BsLinkedin className='group-hover:text-[#317daf] transition' />
+          </a>
+          
+          <a href='https://github.com/IliasPavlakos' target='_blank' 
+          className='group bg-white p-4 rounded-full
+          outline-none cursor-pointer focus:scale-[1.15] hover:scale-110
+          shadow hover:shadow-md
+          active:scale-105
+          transition'>
+            <FaGithubSquare className='group-hover:text-[#a348ad] transition'/>
+          </a>
+
+        </motion.div>
 
     </section>
   )
