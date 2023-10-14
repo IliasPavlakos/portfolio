@@ -2,6 +2,7 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import portfolioWebsiteProjectImage from "/public/portfolio-website-screenshot.png"
 
 export const links = [
   {
@@ -43,10 +44,16 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "",
-    description: "",
-    tags: [],
-    imageUrl: "",
+    title: "This portfolio website",
+    description: "My latest project that helped me jumpstart my web skills using Next.js, React, Typescript, Tailwind and Framer-Motion",
+    tags: ["Next.js", "React", "Typescript"],
+    imageUrl: portfolioWebsiteProjectImage,
+  },
+  {
+    title: "Music Streaming Android App",
+    description: "App created based on Spotify’s architecture written in Java and android studio for the client app",
+    tags: ["Java", "Android Studio"],
+    imageUrl: portfolioWebsiteProjectImage,
   },
 ] as const;
 
