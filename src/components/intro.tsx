@@ -9,10 +9,14 @@ import { BsLinkedin } from 'react-icons/bs'
 import { FaGithubSquare } from 'react-icons/fa';
 import { LuSend } from 'react-icons/lu'
 import { useSectionInView } from "@/lib/hooks";
+import {UseActiveSectionContext} from "../../context/active-section-context";
 
 export default function Intro() {
 
     const { ref } = useSectionInView("Home", 0.5);
+
+    const { setActiveSection, setTimeOfLastClick }
+        = UseActiveSectionContext();
 
     return (
 
@@ -96,7 +100,8 @@ export default function Intro() {
                       flex items-center gap-2 shadow hover:shadow-md
                       outline-none cursor-pointer focus:scale-[1.15] hover:scale-110 active:scale-105
                       transition'
-                      href={'#contact'} >
+                      href={'#contact'}
+                      onClick={() => { setActiveSection('Contact'); setTimeOfLastClick(Date.now()); }}>
                     Contact me
                     <LuSend className='opacity-90 group-hover:text-sky-400 group-active:text-sky-400  transition' />
                 </Link>
