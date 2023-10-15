@@ -1,28 +1,18 @@
 "use client";
 
 import Image from 'next/image'
-import React, {useEffect} from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link';
 import { HiDownload } from 'react-icons/hi'
 import { BsLinkedin } from 'react-icons/bs'
 import { FaGithubSquare } from 'react-icons/fa';
 import { LuSend } from 'react-icons/lu'
-import {useInView} from "react-intersection-observer";
-import {UseActiveSectionContext} from "../../context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
 
-    const {ref, inView} = useInView({
-        threshold: 0.8,
-    });
-    const {setActiveSection, timeOfLastClick} = UseActiveSectionContext();
-
-    useEffect(() => {
-        if(inView && Date.now() - timeOfLastClick > 1000){
-            setActiveSection("Home");
-        }
-    }, [inView, setActiveSection, timeOfLastClick]);
+    const { ref } = useSectionInView("Home", 0.5);
 
     return (
 
