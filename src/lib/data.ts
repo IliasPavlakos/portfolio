@@ -32,14 +32,20 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
-  {
-    title: "",
-    location: "",
-    description:
-      "",
-    icon: "",
-    date: "",
-  },
+    {
+        title: "Software Developer",
+        location: "Athens, Attiki, Greece",
+        description: "Energy/Natural Gas Billing Systems\nIntegration with CRM/ERP Systems",
+        icon: React.createElement(CgWorkAlt),
+        date: "2022 - Present",
+    },
+    {
+        title: "Bachelor's Degree, Computer Science",
+        location: "Athens University of Economics and Business",
+        description: "Modules: Information Systems and Information Security, Operations Research and Economics of Information Technology",
+        icon: React.createElement(LuGraduationCap),
+        date: "2016 - 2021",
+    },
 ] as const;
 
 export const projectsData = [
