@@ -45,7 +45,7 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: "This portfolio website",
-    description: "My latest project that helped me jumpstart my web skills using Next.js, React, Typescript, Tailwind and Framer-Motion",
+    description: "My latest project that helped me jumpstart my web skills.tsx using Next.js, React, Typescript, Tailwind and Framer-Motion",
     tags: ["Next.js", "React", "Typescript"],
     imageUrl: portfolioWebsiteProjectImage,
   },
@@ -57,4 +57,17 @@ export const projectsData = [
   },
 ] as const;
 
-export const skillsData = [] as const;
+export const skillsData = [
+    ".Net",
+    ".Net Framework",
+    "C#",
+    "Entity Framework",
+    "ASP.NET MVC",
+    "T-SQL",
+    "Microsoft SQL Server",
+    "DevExpress",
+    "Winforms",
+    "Git",
+    "GitLab CI/CD",
+    "Perforce Helix Core",
+] as const;
